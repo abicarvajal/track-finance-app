@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+main {
+  --shade1: #f2f2f2;
+  --neutralShade: #fff7ec;
+  --grayColor: #999;
+  --borderRadius: 6px;
+  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+  --backgroundColor: #fff;
+  --foregroundColor: #000;
+  --primaryColor: #3f2132;
+  --secondaryColor: #f3a6a6;
+  --shadeColor: #486f41;
+  --tertiaryColor: #bfcd82;
+}
+
+body{
+  font-family: 'Press Start 2P', 'Nunito', cursive;
+  background-color: var(--grayColor);
+}
+
+.footer-info{
+  font-size: 8px;
+  font-family: 'Press Start 2P', 'Nunito', cursive; // Ensure consistent font
+  text-shadow: 3px 3px 0 var(--secondaryColor);
+  a{
+    color: var(--primaryColor);
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.header {
+  position: absolute; // Position the header relative to the form container
+  top: 0; // Align it to the top of the form
+  left: 50%; // Center horizontally
+  transform: translateX(-50%); // Adjust for centering
+  width: 100%; // Optional: Set a width if needed
+  text-align: center; // Center the text inside the header
+  font-family: 'Press Start 2P', 'Nunito', cursive; // Ensure consistent font
+  padding: 5px 0; // Add padding for spacing
+  font-size: 12px;
+  color: var(--backgroundColor);
+  text-shadow: 3px 3px 0 var(--secondaryColor);
+}
+
+.forms {
+  border-width: 0;
+  display: flex; // Use flexbox for centering
+  flex-direction: column; // Stack elements vertically
+  align-items: center; 
+  justify-content: center; 
+}
+
+.form-login {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 25rem; 
+  height: 500px;
+  box-sizing: border-box;
+
+  background-image: url('../../../../../assets/images/background.PNG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__wrapper {
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.label-form {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primaryColor);
+  font-family: 'Press Start 2P', 'Nunito', cursive;
+  text-shadow: 3px 3px 0 var(--secondaryColor);
+}
+
+input.input-form,
+select,
+textarea {
+  height: 50px;
+  font-size: 8px;
+  border: 2px solid var(--primaryColor);
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  font-family: 'Press Start 2P', 'Nunito', cursive;
+  border-radius: var(--borderRadius);
+  color: var(--foregroundColor);
+  background: var(--backgroundColor);
+  box-sizing: border-box;
+  &:focus,
+  &.active {
+    outline: none;
+    border-color: var(--primaryColor);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background: var(--shade1);
+    opacity: 0.6;
+  }
+}
+
+a.button,
+input.button,
+button {
+  width: 80%;
+  outline: none;
+  max-width: 100%;
+  text-align: center;
+  display: inline-block;
+  border: none;
+  font: 500 16px/1 'Press Start 2P', 'Nunito', cursive;
+  text-shadow: 3px 3px 0 var(--secondaryColor);
+  padding: 16px;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  background: var(--primaryColor);
+  color: var(--backgroundColor);
+  position: relative;
+  top: 0;
+  transition: 0.2s ease;
+  box-sizing: border-box;
+  margin: 18px;
+  &:hover,
+  &.hover {
+    top: -3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  &:active,
+  &.active {
+    background: var(--primaryShade4);
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    top: 0;
+  }
+  &.disabled {
+    opacity: 0.4;
+    user-select: none;
+    pointer-events: none;
+  }
+  &.medium {
+    padding: 15px 18px;
+    width: auto;
+  }
+  &.small {
+    padding: 10px 12px;
+    width: auto;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &.secondary {
+    background: var(--secondaryColor);
+    &:active,
+    &:focus,
+    &.active {
+      background: var(--secondaryShade4);
+      outline: none;
+    }
+  }
+  &.accent {
+    background: var(--accentColor);
+    &:active,
+    &:focus,
+    &.active {
+      background: var(--accentShade4);
+    }
+  }
+  &.accent2 {
+    background: var(--accent2Color);
+    &:active,
+    &:focus,
+    &.active {
+      background: var(--accent2Shade4);
+    }
+  }
+  &.accent3 {
+    background: var(--accent3Color);
+    &:active,
+    &:focus,
+    &.active {
+      background: var(--accent3Shade4);
+    }
+  }
+}
+
+.pixel-effect{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.overlays{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+  );
+  animation: crt-flicker 0.1s infinite;
+}
