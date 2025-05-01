@@ -1,5 +1,4 @@
-# track-finance-app
-# Personal Finance Tracker
+# track-finance-app - Personal Finance Tracker
 
 A full-stack app to track your income and expenses.
 
