@@ -1,33 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import "../../../../../assets/styles/shared.scss";
 
-main {
-  --shade1: #f2f2f2;
-  --neutralShade: #fff7ec;
-  --grayColor: #999;
-  --borderRadius: 6px;
-  --boxShadow: 0 2px 5px rgba(#333, 0.2);
-  --backgroundColor: #fff;
-  --foregroundColor: #000;
-  --primaryColor: #3f2132;
-  --secondaryColor: #f3a6a6;
-  --shadeColor: #486f41;
-  --tertiaryColor: #bfcd82;
-}
-
-body{
-  font-family: 'Press Start 2P', 'Nunito', cursive;
+body {
+  font-family: var(--font);
   background-color: var(--grayColor);
 }
 
-.footer-info{
+.footer-info {
   font-size: 8px;
-  font-family: 'Press Start 2P', 'Nunito', cursive; // Ensure consistent font
+  font-family: var(--font);
   text-shadow: 3px 3px 0 var(--secondaryColor);
-  a{
+  a {
     color: var(--primaryColor);
     text-decoration: none;
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -40,7 +27,7 @@ body{
   transform: translateX(-50%); // Adjust for centering
   width: 100%; // Optional: Set a width if needed
   text-align: center; // Center the text inside the header
-  font-family: 'Press Start 2P', 'Nunito', cursive; // Ensure consistent font
+  font-family: var(--font); // Ensure consistent font
   padding: 5px 0; // Add padding for spacing
   font-size: 12px;
   color: var(--backgroundColor);
@@ -51,8 +38,8 @@ body{
   border-width: 0;
   display: flex; // Use flexbox for centering
   flex-direction: column; // Stack elements vertically
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
 }
 
 .form-login {
@@ -60,11 +47,11 @@ body{
   position: relative;
   overflow: hidden;
   margin: 20px auto;
-  width: 25rem; 
+  width: 25rem;
   height: 500px;
   box-sizing: border-box;
 
-  background-image: url('../../../../../assets/images/background.PNG');
+  background-image: url("../../../../../assets/images/background.PNG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -85,7 +72,7 @@ body{
   display: block;
   margin-bottom: 5px;
   color: var(--primaryColor);
-  font-family: 'Press Start 2P', 'Nunito', cursive;
+  font-family: var(--font);
   text-shadow: 3px 3px 0 var(--secondaryColor);
 }
 
@@ -98,7 +85,7 @@ textarea {
   width: 100%;
   max-width: 100%;
   padding: 12px;
-  font-family: 'Press Start 2P', 'Nunito', cursive;
+  font-family: var(--font);
   border-radius: var(--borderRadius);
   color: var(--foregroundColor);
   background: var(--backgroundColor);
@@ -124,7 +111,7 @@ button {
   text-align: center;
   display: inline-block;
   border: none;
-  font: 500 16px/1 'Press Start 2P', 'Nunito', cursive;
+  font: 500 16px/1 var(--font);
   text-shadow: 3px 3px 0 var(--secondaryColor);
   padding: 16px;
   cursor: pointer;
@@ -196,27 +183,4 @@ button {
       background: var(--accent3Shade4);
     }
   }
-}
-
-.pixel-effect{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.overlays{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15) 1px,
-      transparent 1px,
-      transparent 2px
-  );
-  animation: crt-flicker 0.1s infinite;
 }

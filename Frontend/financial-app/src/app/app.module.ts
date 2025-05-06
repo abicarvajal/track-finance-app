@@ -8,6 +8,7 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { TransactionsModule } from './modules/transactions/transactions.module';
 import { SettingsModule } from './modules/settings/settings.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './modules/dashboard/components/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
