@@ -1,10 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
+  @ViewChild('chartContainer') chartContainer!: ElementRef;
 
+  width = 600;
+  height = 400;
+  data = [
+    { name: 'Food', value: 890 },
+    { name: 'Transport', value: 500 },
+    { name: 'Travel', value: 700 },
+    { name: 'Shopping', value: 300 },
+    { name: 'Health', value: 200 },
+    { name: 'Entertainment', value: 400 },
+    { name: 'Other', value: 100 },
+  ];
+  
+  ngAfterViewInit(): void {
+    const rect = this.chartContainer.nativeElement.getBoundingClientRect();
+    this.width = rect.width;
+    this.height = rect.height;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    const rect = this.chartContainer.nativeElement.getBoundingClientRect();
+    this.width = rect.width;
+    this.height = rect.height;
+  }
 }

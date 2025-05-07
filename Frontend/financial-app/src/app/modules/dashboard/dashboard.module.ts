@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './components/dashboard.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -9,7 +10,8 @@ import { DashboardComponent } from './components/dashboard.component';
     DashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgxChartsModule
   ]
 })
 export class DashboardModule { }

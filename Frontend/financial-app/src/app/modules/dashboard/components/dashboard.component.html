@@ -1,36 +1,45 @@
 <main>
     <div class="dashboard">
-      <!-- Title -->
-      <h1 class="dashboard__title">Dashboard</h1>
-    
-      <!-- First Chart -->
-      <div class="dashboard__section">
-        <h2 class="dashboard__section-title">Transactions</h2>
-        <div class="dashboard__chart">
-          <!-- Placeholder for the chart -->
-          <p class="dashboard__chart-placeholder">Bar Chart Placeholder</p>
+        <!-- Title -->
+        <h1 class="dashboard__title">Dashboard</h1>
+
+        <!-- First Chart -->
+        <div class="dashboard__section">
+            <h2 class="dashboard__section-title">Transactions</h2>
+            <div #chartContainer class="dashboard__chart">
+                <!-- Placeholder for the chart -->
+                <ngx-charts-bar-vertical [results]="data" [view]="[width, height]" [yAxis]="true" [legend]="true"
+                    [showXAxisLabel]="true" [showYAxisLabel]="true" [yAxisLabel]="'Amont'" [barPadding]="4"
+                    scheme="forest">
+                </ngx-charts-bar-vertical>
+
+            </div>
         </div>
-      </div>
-    
-      <!-- Buttons -->
-      <div class="dashboard__actions">
-        <button class="dashboard__button dashboard__button--income">New Income <i class="fa-solid fa-dollar-sign"></i></button>
-        
-        <button class="dashboard__button dashboard__button--expense">New Expense <i class="fa-solid fa-credit-card"></i></button>
-      </div>
-    
-      <!-- Second Chart -->
-      <div class="dashboard__section">
-        <h2 class="dashboard__section-title">Income/Expense</h2>
-        <div class="dashboard__chart">
-          <!-- Placeholder for the chart -->
-          <p class="dashboard__chart-placeholder">Bar Chart Placeholder</p>
+
+        <!-- Buttons -->
+        <div class="dashboard__actions">
+            <button class="dashboard__button dashboard__button--income">New Income 💰</button>
+
+            <button class="dashboard__button dashboard__button--expense">New Expense <i class="dashboard__icon">💸</i></button>
         </div>
-      </div>
-    
-      <div class="pixel-effect">
-        <div class="overlays"></div>
-      </div>
+
+        <!-- Second Chart -->
+        <div class="dashboard__section">
+            <h2 class="dashboard__section-title">Income/Expense</h2>
+            <div class="dashboard__chart">
+                <!-- Placeholder for the chart -->
+                <p class="dashboard__chart-placeholder">Bar Chart Placeholder</p>
+            </div>
+        </div>
+
+        <div class="dashboard__actions">
+            <button class="dashboard__button dashboard__button--income">View registers 📝</button>
+
+        </div>
+
+        <div class="pixel-effect">
+            <div class="overlays"></div>
+        </div>
     </div>
 
 </main>
