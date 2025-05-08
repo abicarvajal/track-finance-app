@@ -18,9 +18,9 @@
 
         <!-- Buttons -->
         <div class="dashboard__actions">
-            <button class="dashboard__button dashboard__button--income">New Income 💰</button>
+            <button class="dashboard__button dashboard__button--income" (click)="redirectToTransaction('income')">New Income 💰</button>
 
-            <button class="dashboard__button dashboard__button--expense">New Expense <i class="dashboard__icon">💸</i></button>
+            <button class="dashboard__button dashboard__button--expense" (click)="redirectToTransaction('expense')">New Expense 💸</button>
         </div>
 
         <!-- Second Chart -->

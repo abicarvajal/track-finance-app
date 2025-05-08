@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './components/dashboard.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     CommonModule,

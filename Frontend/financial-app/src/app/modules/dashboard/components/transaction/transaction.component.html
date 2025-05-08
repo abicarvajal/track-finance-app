@@ -1,0 +1,30 @@
+<main>
+    <div class="transaction">
+        <!-- Title -->
+        <h1 class="transaction__title">New {{type}}</h1>
+
+        <!-- First Chart -->
+        <div class="transaction__section">
+
+            <label for="transaction-type" class="transaction__label">Transaction Type:</label>
+            <select id="transaction-type" class="transaction__select">
+                <option *ngFor="let option of transactionOptions" [value]="option.value">{{ option.name }}</option>
+            </select>
+            <label for="transaction-type" class="transaction__label">Amount:</label>
+            <input type="number" class="transaction__input" id="transaction-amount" placeholder="Enter amount" required>
+            <label for="transaction-type" class="transaction__label">Description:</label>
+            <input type="text" class="transaction__input" id="transaction-amount" placeholder="Enter description" required>
+        </div>
+
+        <!-- Buttons -->
+        <div class="transaction__actions">
+            <button class="transaction__button transaction__button--income">Save 💾</button>
+
+            <button class="transaction__button transaction__button--expense" (click)="goHome()">Cancel ❌</button>
+        </div>
+
+        <div class="pixel-effect">
+            <div class="overlays"></div>
+        </div>
+    </div>
+</main> 
